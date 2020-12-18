@@ -1,9 +1,12 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
+use List::Util qw(sum);
 
-my @fred = qw{ 1 3 5 7 9 };
+my @n = qw{ 1 3 5 7 9 };
 
-sub above_average {
-
+sub average {
+    return sum(@_)/@_;
 }
+
+print average(@n);
