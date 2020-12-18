@@ -3,10 +3,17 @@ use strict;
 use warnings;
 use List::Util qw(sum);
 
-my @n = qw{ 1 3 5 7 9 };
+my @n = ( 1 .. 10 );
 
 sub average {
     return sum(@_)/@_;
 }
 
-print average(@n);
+# print average(@n);
+
+foreach ( @n ) {
+    if ($_ > average(@n)) {
+        print($_);
+        print("\n")
+    }
+}
