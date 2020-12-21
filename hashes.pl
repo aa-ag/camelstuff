@@ -18,7 +18,7 @@
 # @any_array = %some_hash;
 
 # print "@any_array\n"
-# hello world bar 12.4 foo 25 1.72e+030 betty bye\n
+## hello world bar 12.4 foo 25 1.72e+030 betty bye\n
 
 # my %last_name = (
 #     'fred' => 'flinstone',
@@ -43,10 +43,24 @@ $books{'wilma'} = 1;
 my $person = "fred";
 delete $books{$person};
 
-if (exists $books{'fred'}) {
-    print "Yes. There's a fred in the hash. He's checked out \"$books{'fred'}\" books."
-} else {
-    print "No such person..."
+$books{'taylor'} = 2;
+$books{'alyssa'} = 3;
+$books{'tina'} = 4;
+
+# if (exists $books{'fred'}) {
+#     print "Yes. There's a fred in the hash. He's checked out \"$books{'fred'}\" books."
+# } else {
+#     print "No such person..."
+# }
+## Yes. There's a fred in the hash. He's checked out "3" books.
+
+foreach $person (sort keys %books) {
+    if ($books{$person}) {
+        print "$person has $books{$person} items checked out.\n"
+    }
 }
 
-# Yes. There's a fred in the hash. He's checked out "3" books.
+## alyssa has 3 items checked out.
+## taylor has 2 items checked out.
+## tina has 4 items checked out.
+## wilma has 1 items checked out.
