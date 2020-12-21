@@ -40,8 +40,13 @@
 $books{'fred'} = 3;
 $books{'wilma'} = 1;
 
+my $person = "fred";
+delete $books{$person};
+
 if (exists $books{'fred'}) {
     print "Yes. There's a fred in the hash. He's checked out \"$books{'fred'}\" books."
+} else {
+    print "No such person..."
 }
 
 # Yes. There's a fred in the hash. He's checked out "3" books.
