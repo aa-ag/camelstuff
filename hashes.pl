@@ -40,8 +40,8 @@
 $books{'fred'} = 3;
 $books{'wilma'} = 1;
 
-my $person = "fred";
-delete $books{$person};
+# my $person = "fred";
+# delete $books{$person};
 
 $books{'taylor'} = 2;
 $books{'alyssa'} = 3;
@@ -64,3 +64,6 @@ foreach $person (sort keys %books) {
 ## taylor has 2 items checked out.
 ## tina has 4 items checked out.
 ## wilma has 1 items checked out.
+
+print "PATH is $ENV{PATH}\n"
+
