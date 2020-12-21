@@ -20,19 +20,28 @@
 # print "@any_array\n"
 # hello world bar 12.4 foo 25 1.72e+030 betty bye\n
 
-my %last_name = (
-    'fred' => 'flinstone',
-    'dino' => undef,
-    'barney' => 'rubble',
-    'betty' => 'rubble',
-);
+# my %last_name = (
+#     'fred' => 'flinstone',
+#     'dino' => undef,
+#     'barney' => 'rubble',
+#     'betty' => 'rubble',
+# );
 
 # while ( ($key, $value) = each %last_name ) {
 #     print "$key => $value\n";
 # }
 
-my %hash = ('a' => 1, 'b' => 2, 'c' => 3);
-my @k = keys %hash;
-my @v = values %hash;
+# my %hash = ('a' => 1, 'b' => 2, 'c' => 3);
+# my @k = keys %hash;
+# my @v = values %hash;
 
-print @k, @v
+# print @k, @v
+
+$books{'fred'} = 3;
+$books{'wilma'} = 1;
+
+if (exists $books{'fred'}) {
+    print "Yes. There's a fred in the hash. He's checked out \"$books{'fred'}\" books."
+}
+
+# Yes. There's a fred in the hash. He's checked out "3" books.
