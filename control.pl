@@ -39,3 +39,16 @@ foreach (@words) {
     }
 }
 print "You've completed the test, with $errors errors.\n"
+
+## redo 2
+
+foreach (1 .. 10) {
+    print "Iteration number $_.\n\n";
+    print "Enter: last, next, redo, or other: ";
+    chomp(my $choice = <STDIN>);
+    print "\n";
+    last if $choice =~ /last/i;
+    redo if $choice =~ /redo/i;
+    next if $choice =~ /next/i;
+    print "That wasn't any of the choices... Try again!\n\n"
+}
