@@ -17,10 +17,12 @@
 
 ###--- 2 ---###
 
-print "Enter words: "
+print "Enter words: ";
 
-my(@words, %count, $word);
-chomp(@words = <STDIN>);
+my %count;
+my $word;
+@words = <STDIN>;
+chomp(@words);
 
 foreach $word (@words) {
     $count{$word} += 1;
