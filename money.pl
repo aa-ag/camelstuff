@@ -1,4 +1,5 @@
 #!/usr/bin/env perl
+use Number::Format
 
 my $money = sprintf "%.2f", 2.49997;
 print $money;
